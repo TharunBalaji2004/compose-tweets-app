@@ -1,6 +1,10 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -66,4 +70,24 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    // Hilt
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-compiler:2.44")
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+
+    // Coroutines
+    implementation("org.jetbrains.kotlin:kotlinx-coroutines-core:1.7.0")
+    implementation("org.jetbrains.kotlin:kotlinx-coroutines-android:1.7.0")
+
+    // Retrofit
+    implementation("com.sqaureup.retrofit2:retrofit:2.9.0")
+    implementation("com.sqaureup.retrofit2:retrofit-gson:2.9.0")
+
+    // Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.1")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 }
