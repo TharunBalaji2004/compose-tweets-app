@@ -11,7 +11,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import com.tharunbalaji.tweetzy.api.TweetzyAPI
+import com.tharunbalaji.tweetzy.screens.CategoryScreen
+import com.tharunbalaji.tweetzy.screens.DetailScreen
 import com.tharunbalaji.tweetzy.ui.theme.TweetzyTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.GlobalScope

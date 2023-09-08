@@ -12,7 +12,6 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 class NetworkModule {
-
     @Singleton
     @Provides
     fun providesRetrofit(): Retrofit {
@@ -20,11 +19,9 @@ class NetworkModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
-
     @Singleton
     @Provides
     fun provideTweetzyAPI(retrofit: Retrofit): TweetzyAPI {
         return retrofit.create(TweetzyAPI::class.java)
     }
-
 }
